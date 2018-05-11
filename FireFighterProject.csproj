@@ -507,6 +507,7 @@
     <Compile Include="Assets\Scripts\EditorScripts\ObjectSelectorEditor.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ObjectSelectorScript.cs" />
     <Compile Include="Assets\Scripts\LightDetector.cs" />
+    <Compile Include="Assets\Scripts\Overlay.cs" />
     <Compile Include="Assets\Scripts\ParticleTrigger.cs" />
   </ItemGroup>
   <ItemGroup>

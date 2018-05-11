@@ -6223,7 +6223,7 @@ GameObject:
   - component: {fileID: 783771371}
   - component: {fileID: 783771374}
   - component: {fileID: 783771373}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ThermalCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13702,6 +13702,14 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -2.986
       objectReference: {fileID: 0}
+    - target: {fileID: 1086687865922550, guid: 9a32dfe5a1ffa9c418d9143fe6866739, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291359841786862, guid: 9a32dfe5a1ffa9c418d9143fe6866739, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a32dfe5a1ffa9c418d9143fe6866739, type: 2}
   m_IsPrefabParent: 0
@@ -15440,6 +15448,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1934184392}
   m_Mesh: {fileID: 4300022, guid: b6c9c82bb19dd26468f8c3f4ece8f89b, type: 3}
+--- !u!1 &1938157652 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1983742442866384, guid: 9a32dfe5a1ffa9c418d9143fe6866739,
+    type: 2}
+  m_PrefabInternal: {fileID: 1720292301}
+--- !u!114 &1938157654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1938157652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08190b36c9808b94e8c26167c8c671db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1940022505
 GameObject:
   m_ObjectHideFlags: 0
