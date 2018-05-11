@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 43
+    x: 8
+    y: 51
     width: 1707
     height: 877
   m_ShowMode: 4
@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1707
     height: 827
-  m_MinSize: {x: 681, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 126
+  controlID: 36
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 127
+  controlID: 12
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 128
+  controlID: 13
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -255,8 +255,8 @@ MonoBehaviour:
     y: 0
     width: 545
     height: 827
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -285,8 +285,8 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 293
-    y: 92
+    x: 301
+    y: 100
     width: 867
     height: 535
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -362,27 +362,27 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 92
+    x: 8
+    y: 100
     width: 289
     height: 535
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d6890000fa850000c88500008a86000022860000
-    m_LastClickedID: 35286
-    m_ExpandedIDs: 1eb2feff20b2feff22b2feff5eb2feff62b2feff84b8feffd2b9feffd0d9feff4edbfeff9000ffff5a0cffff00000000e6850000
+    m_SelectedIDs: fe4ffeff
+    m_LastClickedID: -110594
+    m_ExpandedIDs: e61cfcffa2f6feffa6f6feff9efcfeffbcfcfefffafcfeff000000000a6400002c65000040650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: FurnitureThermal
-      m_OriginalName: FurnitureThermal
+      m_Name: SmallFires
+      m_OriginalName: SmallFires
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 30032
+      m_UserData: -152652
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -416,20 +416,20 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 293
-    y: 92
+    x: 301
+    y: 100
     width: 867
     height: 535
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 893.2490204459923
+  lastFramingTime: 820.7876120717029
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.8185546, y: 3.2514226, z: 1.2290692}
+    m_Target: {x: -26.304117, y: -0.0892334, z: 15.438023}
     speed: 2
-    m_Value: {x: 3.8185546, y: 3.2514226, z: 1.2290692}
+    m_Value: {x: -26.304117, y: -0.0892334, z: 15.438023}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -453,13 +453,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.27324125, y: 0.30861387, z: -0.09304055, w: -0.90633595}
+    m_Target: {x: -0.029338151, y: 0.53778607, z: -0.018729718, w: -0.8423625}
     speed: 2
-    m_Value: {x: -0.2732406, y: 0.30861312, z: -0.093040325, w: -0.9063338}
+    m_Value: {x: -0.029338151, y: 0.53778607, z: -0.018729718, w: -0.8423625}
   m_Size:
-    m_Target: 2.4886746
+    m_Target: 32.627888
     speed: 2
-    m_Value: 2.4886746
+    m_Value: 32.627888
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -520,8 +520,8 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 648
+    x: 8
+    y: 656
     width: 1160
     height: 250
   m_PersistentViewDataDictionary: {fileID: 0}
@@ -537,19 +537,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Materials/RenderTexture
+    - Assets/Standard Assets/ParticleSystems/Materials
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials/RenderTexture
+  - Assets/Standard Assets/ParticleSystems/Materials
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\DUnity\FireFighterProject
+  m_LastProjectPath: D:\Documents\Github\FireFighterProject
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 11}
-    m_SelectedIDs: dc550000
-    m_LastClickedID: 21980
-    m_ExpandedIDs: 0000000076520000f8530000925400005459000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 295}
+    m_SelectedIDs: 965d0000
+    m_LastClickedID: 23958
+    m_ExpandedIDs: 00000000365a0000a45a0000d45b0000765c0000545e00007061000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -577,7 +577,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000076520000f85300009254000054590000
+    m_ExpandedIDs: 00000000365a0000d45b0000765c000070610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -654,10 +654,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 676
-    width: 1305
-    height: 342
+    x: 8
+    y: 656
+    width: 1160
+    height: 250
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper: []
@@ -697,10 +697,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 676
-    width: 1305
-    height: 342
+    x: 8
+    y: 656
+    width: 1160
+    height: 250
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &19
 MonoBehaviour:
@@ -724,8 +724,8 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1164
-    y: 92
+    x: 1172
+    y: 100
     width: 543
     height: 806
   m_PersistentViewDataDictionary: {fileID: 0}
