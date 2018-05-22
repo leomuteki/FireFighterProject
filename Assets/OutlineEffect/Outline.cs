@@ -45,6 +45,7 @@ namespace cakeslice
         private void Awake()
         {
             Renderer = GetComponent<Renderer>();
+            originalLayer = gameObject.layer;
         }
 
         void OnEnable()

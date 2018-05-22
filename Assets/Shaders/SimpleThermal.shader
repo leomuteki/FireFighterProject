@@ -65,11 +65,9 @@
 			temp *= temp;
 			// Map to high brightness
 			temp *= _Brightness * _Conductivity;
-			temp = 0;
 			o.Albedo = float3(temp, temp, temp);//float3(temp, temp, temp);
 			o.Metallic = _Metallic;
 			o.Smoothness = _Glossiness;
-			o.Alpha = c.a;
 		}
 		ENDCG
 	}

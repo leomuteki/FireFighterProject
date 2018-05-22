@@ -176,7 +176,6 @@ namespace cakeslice
                 foreach(Outline outline in outlines)
                 {
                     LayerMask l = sourceCamera.cullingMask;
-
                     if(outline != null && l == (l | (1 << outline.originalLayer)))
                     {
                         for(int v = 0; v < outline.Renderer.sharedMaterials.Length; v++)

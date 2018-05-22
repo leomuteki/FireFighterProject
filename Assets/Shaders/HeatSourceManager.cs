@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class HeatSourceManager : MonoBehaviour
+public class HeatSourceManager : Singleton<HeatSourceManager>
 {
     public List<HeatSource> HeatSources = new List<HeatSource>();
     [SerializeField]
@@ -16,7 +16,12 @@ public class HeatSourceManager : MonoBehaviour
     {
         UpdateShader();
     }
-    
+
+    // TEST
+    private void Update()
+    {
+    }
+
     public void UpdateShader()
     {
         foreach (Material mat in mats)
@@ -30,5 +35,10 @@ public class HeatSourceManager : MonoBehaviour
             }
             mat.SetVectorArray("_HeatSources", vectors);
         }
+    }
+
+    public void UpdateTemperature(float temp)
+    {
+        Debug.Log(temp);
     }
 }
