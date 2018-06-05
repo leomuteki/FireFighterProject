@@ -2,9 +2,10 @@
 
 public class Overlay : MonoBehaviour {
 
+    public GameObject FLIRCamera;
+
 	// Use this for initialization
 	void Start () {
-        //turnOnOverlay(true);
 	}
 	
 	// Update is called once per frame
@@ -17,6 +18,10 @@ public class Overlay : MonoBehaviour {
         {
             turnOnOverlay(true);
         }
+        else if(Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            toggleOutlines();
+        }
 		
 	}
 
@@ -25,12 +30,16 @@ public class Overlay : MonoBehaviour {
         if (is_on)
         {
             GetComponent<Camera>().cullingMask = (1 << LayerMask.NameToLayer("ThermalLayer") | 1 << LayerMask.NameToLayer("SmokeLayer"));// | (1 << LayerMask.NameToLayer("FireLayer")) | (1 << LayerMask.NameToLayer("FLIRLayer"));
-            //GetComponent<cakeslice.OutlineEffect>().enabled = true;
         }
         else
         {
             GetComponent<Camera>().cullingMask = ~(1 << LayerMask.NameToLayer("ThermalLayer"));
-            //GetComponent<cakeslice.OutlineEffect>().enabled = false;
         }
+    }
+
+    private void toggleOutlines()
+    {
+        GetComponent<cakeslice.OutlineEffect>().enabled = GetComponent<cakeslice.OutlineEffect>().enabled ? false : true;
+        FLIRCamera.GetComponent<cakeslice.OutlineEffect>().enabled = GetComponent<cakeslice.OutlineEffect>().enabled ? false : true;
     }
 }

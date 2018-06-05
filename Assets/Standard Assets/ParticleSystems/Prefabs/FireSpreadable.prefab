@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 2300000}
   - component: {fileID: 11400002}
   - component: {fileID: 11400004}
-  - component: {fileID: 114811357077364904}
-  - component: {fileID: 135527308127816386}
-  - component: {fileID: 54001388759284746}
+  - component: {fileID: 114006074170329352}
+  - component: {fileID: 135860153253944538}
+  - component: {fileID: 54312914441377180}
   m_Layer: 9
-  m_Name: FireComplex
+  m_Name: FireSpreadable
   m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,7 +165,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.326, y: -0.063, z: 0.634}
+  m_LocalPosition: {x: 1.5089815, y: 1.304, z: 0.8643189}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400006}
@@ -456,7 +456,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1264407661
+  randomSeed: -1777306194
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -584,7 +584,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3769,7 +3769,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 999380979
+  randomSeed: 1948285762
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3897,8 +3897,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 0.3
+      scalar: 1.25
+      minScalar: 0.7
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -10509,7 +10509,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 162493659
+  randomSeed: 618543888
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -13828,7 +13828,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -1571813619
+  randomSeed: 1887557558
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -17093,7 +17093,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -777343721
+  randomSeed: 1325920864
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -20400,7 +20400,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -1249952442
+  randomSeed: 402898150
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -24369,7 +24369,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1185272567271880}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54001388759284746
+--- !u!54 &54312914441377180
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -24420,6 +24420,22 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114006074170329352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c05a0ebdf222754abbb6baba416283a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire: {fileID: 100000}
+  raySpawnOffset: 0.5
+  rayLength: 1
+  offset: 0.5
+  spreadTime: 3
 --- !u!114 &114228564180977812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -24468,24 +24484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723274b822865ed4d9ed2a504c0ca79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114811357077364904
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c37e374859a9416448eca1c68efd29ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fire: {fileID: 100000, guid: c0e05edf687fbfb41a505e06778eafbd, type: 2}
-  raySpawnOffset: 0.5
-  rayLength: 1
-  offset: 0.5
-  spreadTime: 3
-  range: 1
---- !u!135 &135527308127816386
+--- !u!135 &135860153253944538
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

@@ -468,6 +468,12 @@
     <Compile Include="Assets\Scripts\CustomImageEffect.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ObjectSelectorEditor.cs" />
     <Compile Include="Assets\Scripts\EditorScripts\ObjectSelectorScript.cs" />
+    <Compile Include="Assets\Scripts\Fire\Fire.cs" />
+    <Compile Include="Assets\Scripts\Fire\FireManager.cs" />
+    <Compile Include="Assets\Scripts\Fire\FireSource.cs" />
+    <Compile Include="Assets\Scripts\Fire\FireSpot.cs" />
+    <Compile Include="Assets\Scripts\Fire\FireSpreadable.cs" />
+    <Compile Include="Assets\Scripts\Fire\FlammableObject.cs" />
     <Compile Include="Assets\Scripts\LightDetector.cs" />
     <Compile Include="Assets\Scripts\Overlay.cs" />
     <Compile Include="Assets\Scripts\ParticleTrigger.cs" />

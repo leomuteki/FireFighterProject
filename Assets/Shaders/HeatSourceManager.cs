@@ -36,9 +36,4 @@ public class HeatSourceManager : Singleton<HeatSourceManager>
             mat.SetVectorArray("_HeatSources", vectors);
         }
     }
-
-    public void UpdateTemperature(float temp)
-    {
-        Debug.Log(temp);
-    }
 }

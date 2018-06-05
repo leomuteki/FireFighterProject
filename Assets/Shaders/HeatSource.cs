@@ -10,8 +10,4 @@ public class HeatSource : MonoBehaviour
         HeatSourceManager.Instance.HeatSources.Add(this.GetComponent<HeatSource>());
     }
 
-    private void OnBecameVisible()
-    {
-        HeatSourceManager.Instance.UpdateTemperature(temperature);
-    }
 }
