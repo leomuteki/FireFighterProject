@@ -99,14 +99,17 @@ public abstract class Fire : MonoBehaviour {
                     {
                         GameObject new_fire = Instantiate(fire, spawn, fire.transform.rotation);
                         FireManager.Instance.AddFire(new_fire);
+                        FlammableObject flammableObject = collider.gameObject.GetComponent<FlammableObject>();
+                        if (flammableObject != null)
+                        {
+                            new_fire.GetComponent<FireSpreadable>().SetSpreadTime(flammableObject.flameIndex);
+                        }
                         Debug.Log("Spawning new fire on object!");
                     }
                 }
                 Debug.Log("Did not Hit");
             }
         }
-
-
     }
 
     public void OnTriggerEnter(Collider other)

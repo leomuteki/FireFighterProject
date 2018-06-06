@@ -2,8 +2,9 @@
 
 public class HeatSource : MonoBehaviour
 {
-    [Range(0.5f, 1)]
+    [Range(0, 1)]
     public float temperature = 0.5f;
+    public float CoolDownDuration = 2.0f;
 
     private void Awake()
     {

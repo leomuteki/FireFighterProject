@@ -9,7 +9,6 @@ public enum ObjectType
     Fabric = 2,
     Plastic = 3,
     Metal = 4
-
 }
 
 public class FlammableObject : MonoBehaviour {
