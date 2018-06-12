@@ -8,7 +8,7 @@ public enum ObjectType
     Leather = 1,
     Fabric = 2,
     Plastic = 3,
-    Metal = 4
+    Paper = 4
 }
 
 public class FlammableObject : MonoBehaviour {
@@ -37,9 +37,9 @@ public class FlammableObject : MonoBehaviour {
         {
             flameIndex = 2;
         }
-        else if(type == ObjectType.Fabric)
+        else if(type == ObjectType.Paper)
         {
-            flameIndex = 4;
+            flameIndex = 8;
         }
     }
 }

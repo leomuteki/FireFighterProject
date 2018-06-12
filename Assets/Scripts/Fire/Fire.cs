@@ -8,15 +8,17 @@ public abstract class Fire : MonoBehaviour {
     public float raySpawnOffset = 1f;
     public float rayLength = 1f;
     public float offset = 0.5f;
-    public float spreadTime = 5f;
-    private float baseSpreadTime = 5f;
+    public float baseSpreadTime = 10f;
+    public float spreadTime;
+    private float flameIndex = 0;
     private float timer;
     private bool fireSpread = false;
 
     private List<Collider> nearbyObjects;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+        spreadTime = baseSpreadTime - flameIndex;
         nearbyObjects = new List<Collider>();
     }
 	
@@ -37,7 +39,7 @@ public abstract class Fire : MonoBehaviour {
 
     public void SetSpreadTime(float index)
     {
-        spreadTime = baseSpreadTime - index;
+        flameIndex = index;
     }
 
     public void SpawnFire(List<Vector3> downSpawnPoints, List<Vector3> upSpawnPoints, bool ignoreFlammability)
@@ -54,7 +56,7 @@ public abstract class Fire : MonoBehaviour {
                 {
                     GameObject new_fire = Instantiate(fire, hit.point, hit.transform.rotation);
                     FlammableObject flammableObject = hit.transform.GetComponent<FlammableObject>();
-
+                    Debug.Log(flammableObject);
                     //This accounts for objects that aren't flammable like floors
                     if(flammableObject != null)
                     {
@@ -76,9 +78,6 @@ public abstract class Fire : MonoBehaviour {
             if (Physics.Raycast(spawn, transform.TransformDirection(Vector3.up), out hit, rayLength))
             {
                 Debug.DrawRay(spawn, transform.TransformDirection(Vector3.up) * hit.distance, Color.yellow);
-                Debug.Log("Hit!");
-                Debug.Log(hit.transform.gameObject.name);
-                Debug.Log(hit.point);
                 if ((!FireManager.Instance.FireExists(hit.point) && hit.transform.tag == "Flammable") || ignoreFlammability)
                 {
                     GameObject new_fire = Instantiate(fire, hit.point, hit.transform.rotation);
