@@ -29,12 +29,10 @@ public class LightDetector : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         tex = new Texture2D(width, height, TextureFormat.RGB24, false);
-
-		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate() {
         if(timer >= scanTime)
         {
             UpdateLegend();
@@ -44,21 +42,19 @@ public class LightDetector : MonoBehaviour {
         {
             timer += Time.deltaTime;
         }
-        
-		
 	}
 
     public void UpdateLegend()
     {
-        Color lowestColor = new Color();
-        Color highestColor = new Color();
+        Color lowestColor = tex.GetPixel(width / 2, height / 2);
+        Color highestColor = lowestColor;
 
         RenderTexture.active = renderTexture;
         tex.ReadPixels(new Rect(0, 0, width, height), 0, 0);
         tex.Apply();
 
-        float lowestLuminance = GetLuminance(tex.GetPixel(0, 0));
-        float highestLuminance = GetLuminance(tex.GetPixel(0, 0));
+        float lowestLuminance = GetLuminance(tex.GetPixel(width/2, height/2));
+        float highestLuminance = lowestLuminance;
         for (int i = 0; i < height; i += pixelSkips)
         {
             for (int j = 0; j < width; j += pixelSkips)
@@ -95,10 +91,20 @@ public class LightDetector : MonoBehaviour {
 
     public bool IsGrayScale(Color color)
     {
-        float sum = color.r + color.b + color.g;
-        float dist = (Mathf.Pow(sum, 2) / 3) - Mathf.Pow(color.r, 2) - Mathf.Pow(color.g, 2) - Mathf.Pow(color.b, 2);
-
-        return dist > -GRAYSCALE_THRESHOLD;
+        float ave = (color.r + color.b + color.g) / 3;
+        if ((color.r - ave) > GRAYSCALE_THRESHOLD || (color.r - ave) < -GRAYSCALE_THRESHOLD)
+        {
+            return false;
+        }
+        if ((color.g - ave) > GRAYSCALE_THRESHOLD || (color.g - ave) < -GRAYSCALE_THRESHOLD)
+        {
+            return false;
+        }
+        if ((color.b - ave) > GRAYSCALE_THRESHOLD || (color.b - ave) < -GRAYSCALE_THRESHOLD)
+        {
+            return false;
+        }
+        return true;
     }
 
     //Calculates a fake temperature value based off interpolation

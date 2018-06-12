@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Overlay : MonoBehaviour
 {
-
     [SerializeField]
     private bool AlwaysThermal = false;
     [SerializeField]
     private Material squareLinesMaterial;
     private cakeslice.OutlineEffect CompleteOutlines;
     private Camera Cam;
-    private List<Vector3> points = new List<Vector3>();
     private bool overlayIsOn = false;
     private enum outlines { none, squares, complete };
     private outlines outlineType = outlines.none;
@@ -21,7 +19,47 @@ public class Overlay : MonoBehaviour
     private float yGap = 0.02f;
     [SerializeField]
     private float OutlineScanDelay = 0.1f;
+    private Dictionary<string, OutlineSquare> currentSquares = new Dictionary<string, OutlineSquare>();
+    private List<Vector3> renderSquares = new List<Vector3>();
+    [SerializeField]
+    private List<Light> allLights = new List<Light>();
 
+    private class OutlineSquare
+    {
+        public float xMin = Mathf.Infinity;
+        public float xMax = Mathf.NegativeInfinity;
+        public float yMin = Mathf.Infinity;
+        public float yMax = Mathf.NegativeInfinity;
+        public bool updated = false;
+        public List<Vector3> points = new List<Vector3>();
+
+        public void resetCorners()
+        {
+            xMin = Mathf.Infinity;
+            xMax = Mathf.NegativeInfinity;
+            yMin = Mathf.Infinity;
+            yMax = Mathf.NegativeInfinity;
+        }
+
+        public void UpdateMyPoints()
+        {
+            Vector3 LL = new Vector3(xMin, yMin, 0);
+            Vector3 LR = new Vector3(xMax, yMin, 0);
+            Vector3 UL = new Vector3(xMin, yMax, 0);
+            Vector3 UR = new Vector3(xMax, yMax, 0);
+            
+            points.Clear();
+            points.Add(LL);
+            points.Add(LR);
+            points.Add(LL);
+            points.Add(UL);
+            points.Add(UL);
+            points.Add(UR);
+            points.Add(LR);
+            points.Add(UR);
+        }
+    }
+    
     // Use this for initialization
     void Start()
     {
@@ -59,6 +97,16 @@ public class Overlay : MonoBehaviour
         {
             turnOnOverlay(true);
         }
+        else if (!AlwaysThermal && Input.GetKeyDown(KeyCode.L))
+        {
+            if (allLights.Count > 0) {
+                bool on_status = allLights[0].enabled;
+                foreach (Light light in allLights)
+                {
+                    light.enabled = !on_status;
+                }
+            }
+        }
 
         // Draw outlines
         if (overlayIsOn)
@@ -82,7 +130,6 @@ public class Overlay : MonoBehaviour
                     break;
                 case outlines.squares:
                     CompleteOutlines.enabled = false;
-                    //UpdateSquares();
                     break;
                 case outlines.complete:
                     CompleteOutlines.enabled = true;
@@ -98,11 +145,11 @@ public class Overlay : MonoBehaviour
         overlayIsOn = is_on;
         if (is_on)
         {
-            GetComponent<Camera>().cullingMask = (1 << LayerMask.NameToLayer("ThermalLayer") | 1 << LayerMask.NameToLayer("SmokeLayer"));// | (1 << LayerMask.NameToLayer("FireLayer")) | (1 << LayerMask.NameToLayer("FLIRLayer"));
+            GetComponent<Camera>().cullingMask = (1 << LayerMask.NameToLayer("ThermalLayer") | 1 << LayerMask.NameToLayer("SmokeLayer") | 1 << LayerMask.NameToLayer("OutlineLayer"));// | (1 << LayerMask.NameToLayer("FireLayer")) | (1 << LayerMask.NameToLayer("FLIRLayer"));
         }
         else
         {
-            GetComponent<Camera>().cullingMask = ~(1 << LayerMask.NameToLayer("ThermalLayer"));
+            GetComponent<Camera>().cullingMask = ~( (1 << LayerMask.NameToLayer("ThermalLayer") | (1 << LayerMask.NameToLayer("OutlineLayer"))));
         }
     }
 
@@ -117,61 +164,89 @@ public class Overlay : MonoBehaviour
             yield return new WaitForSeconds(OutlineScanDelay);
         }
     }
-
+    
     private void UpdateSquares()
     {
-        float Xmin = Mathf.Infinity;
-        float Xmax = Mathf.NegativeInfinity;
-        float Ymin = Mathf.Infinity;
-        float Ymax = Mathf.NegativeInfinity;
-
+        // reset updated flags
+        foreach (KeyValuePair<string, OutlineSquare> squareEntry in currentSquares)
+        {
+            squareEntry.Value.updated = false;
+            squareEntry.Value.resetCorners();
+        }
+        
         for (float x = 0; x <= 1; x += xGap)
         {
             for (float y = 0; y <= 1; y += yGap)
             {
                 Ray ray = Cam.ViewportPointToRay(new Vector3(x, y, 0));
                 RaycastHit hit;
-                if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.tag == "outline")
+                
+                if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.layer == LayerMask.NameToLayer("OutlineLayer"))
                 {
-                    if (x <= Xmin)
+                    // Find parent that is in the outlineLayer
+                    Transform rootName = hit.transform;
+                    while (rootName.parent != null &&  rootName.parent.gameObject.layer == LayerMask.NameToLayer("OutlineLayer"))
                     {
-                        Xmin = x;
+                        rootName = rootName.parent;
                     }
-                    if (x >= Xmax)
+                    
+                    OutlineSquare currentSquare;
+                    // if not in dictionary, add to dictionary
+                    if (currentSquares.ContainsKey(rootName.gameObject.name))
                     {
-                        Xmax = x;
+                        currentSquare = currentSquares[rootName.gameObject.name];
                     }
-                    if (y <= Ymin)
+                    else
                     {
-                        Ymin = y;
+                        currentSquare = new OutlineSquare();
+                        currentSquares.Add(rootName.gameObject.name, currentSquare);
                     }
-                    if (y >= Ymax)
+
+                    // set cursquare values
+                    if (x <= currentSquare.xMin)
                     {
-                        Ymax = y;
+                        currentSquare.xMin = x;
                     }
+                    if (x >= currentSquare.xMax)
+                    {
+                        currentSquare.xMax = x;
+                    }
+                    if (y <= currentSquare.yMin)
+                    {
+                        currentSquare.yMin = y;
+                    }
+                    if (y >= currentSquare.yMax)
+                    {
+                        currentSquare.yMax = y;
+                    }
+
+                    currentSquare.updated = true;
                 }
             }
         }
-
-        Vector3 LL = new Vector3(Xmin, Ymin, 0);
-        Vector3 LR = new Vector3(Xmax, Ymin, 0);
-        Vector3 UL = new Vector3(Xmin, Ymax, 0);
-        Vector3 UR = new Vector3(Xmax, Ymax, 0);
-
-        points.Clear();
-        points.Add(LL);
-        points.Add(LR);
-        points.Add(LL);
-        points.Add(UL);
-        points.Add(UL);
-        points.Add(UR);
-        points.Add(LR);
-        points.Add(UR);
+        renderSquares.Clear();
+        // if updated, add square to renderList, else remove it from renderSquares
+        List<string> squareKeys = new List<string>(currentSquares.Keys);
+        foreach (string squareKey in squareKeys)
+        {
+            if (currentSquares[squareKey].updated == true)
+            {
+                currentSquares[squareKey].UpdateMyPoints();
+                foreach (Vector3 point in currentSquares[squareKey].points)
+                {
+                    renderSquares.Add(point);
+                }
+            }
+            else
+            {
+                currentSquares.Remove(squareKey);
+            }
+        }
     }
 
     private void OnPostRender()
     {
-        if (overlayIsOn && outlineType == outlines.squares && points.Count > 0 && (points.Count % 2 == 0))
+        if (overlayIsOn && outlineType == outlines.squares && renderSquares.Count > 0)
         {
             if (!squareLinesMaterial)
             {
@@ -182,10 +257,9 @@ public class Overlay : MonoBehaviour
             squareLinesMaterial.SetPass(0);
             GL.LoadOrtho();
             GL.Begin(GL.LINES);
-            for (int i = 0; i < (points.Count - 1); ++i)
+            foreach (Vector3 point in renderSquares)
             {
-                GL.Vertex(points[i]);
-                GL.Vertex(points[i + 1]);
+                GL.Vertex(point);
             }
             GL.End();
             GL.PopMatrix();
