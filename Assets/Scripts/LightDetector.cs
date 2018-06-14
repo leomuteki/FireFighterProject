@@ -80,8 +80,8 @@ public class LightDetector : MonoBehaviour {
         legendImage.material.SetColor("_Color", lowestColor);
         legendImage.material.SetColor("_Color2", highestColor);
 
-        maxTempText.text = Math.Round(CalculateTemperature(highestLuminance),2).ToString() + 'F';
-        minTempText.text = Math.Round(CalculateTemperature(lowestLuminance),2).ToString() + 'F';
+        maxTempText.text = Math.Round(CalculateTemperature(highestLuminance),2).ToString() + 'C';
+        minTempText.text = Math.Round(CalculateTemperature(lowestLuminance),2).ToString() + 'C';
     }
 
     public float GetLuminance(Color color)

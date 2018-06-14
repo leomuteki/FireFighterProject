@@ -1,7 +1,7 @@
 ﻿Shader "Custom/SimpleThermal" {
 	Properties {
 		_MaxDist ("Max Distance", Float) = 2.0
-		_Conductivity ("Conductivity", Range(0, 3)) = 1
+		_Conductivity ("Conductivity", Range(0, 100)) = 1
 		_Color ("Color", Color) = (1,1,1,1)
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
 		_Glossiness ("Smoothness", Range(0,1)) = 0.5

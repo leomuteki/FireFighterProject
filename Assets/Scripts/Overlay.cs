@@ -11,7 +11,7 @@ public class Overlay : MonoBehaviour
     private cakeslice.OutlineEffect CompleteOutlines;
     private Camera Cam;
     private bool overlayIsOn = false;
-    private enum outlines { none, squares, complete };
+    private enum outlines { none=0, squares, NumberOfTypes };
     private outlines outlineType = outlines.none;
     [SerializeField, Range(0, 1)]
     private float xGap = 0.02f;
@@ -23,6 +23,11 @@ public class Overlay : MonoBehaviour
     private List<Vector3> renderSquares = new List<Vector3>();
     [SerializeField]
     private List<Light> allLights = new List<Light>();
+    [SerializeField]
+    private Transform MenuStartPosition;
+    [SerializeField]
+    private Transform Menu;
+    private int outlineToggle = 0;
 
     private class OutlineSquare
     {
@@ -63,19 +68,14 @@ public class Overlay : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        CompleteOutlines = GetComponent<cakeslice.OutlineEffect>();
-        if (!CompleteOutlines)
-        {
-            Debug.LogError("Outline Effect script not attached to camera.");
-        }
         Cam = GetComponent<Camera>();
         if (!Cam)
         {
             Debug.LogError("Camera not attached to this game object.");
         }
         // TODO remove this test
-        turnOnOverlay(true);
-        outlineType = outlines.squares;
+        turnOnOverlay(false);
+        outlineType = outlines.none;
         // END TEST
         if (AlwaysThermal)
         {
@@ -85,29 +85,64 @@ public class Overlay : MonoBehaviour
         StartCoroutine(ScanOutline());
     }
 
+    public Transform sphere;
     // Update is called once per frame
     void Update()
     {
-        if (!AlwaysThermal && Input.GetKeyDown(KeyCode.Alpha1))
+        /*
+         * if (OVRInput.Get(OVRInput.Button.SecondaryThumbstick))
         {
-            turnOnOverlay(false);
-            CompleteOutlines.enabled = false;
+            Menu.gameObject.SetActive(true);
         }
-        else if (!AlwaysThermal && Input.GetKeyDown(KeyCode.Alpha2))
+        else
         {
-            turnOnOverlay(true);
-        }
-        else if (!AlwaysThermal && Input.GetKeyDown(KeyCode.L))
+            Menu.gameObject.SetActive(false);
+        }*/
+        if (!AlwaysThermal)
         {
-            if (allLights.Count > 0) {
-                bool on_status = allLights[0].enabled;
-                foreach (Light light in allLights)
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                turnOnOverlay(false);
+                CompleteOutlines.enabled = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                turnOnOverlay(true);
+            }
+            else if (Input.GetKeyDown(KeyCode.L))
+            {
+                if (allLights.Count > 0)
                 {
-                    light.enabled = !on_status;
+                    bool on_status = allLights[0].enabled;
+                    foreach (Light light in allLights)
+                    {
+                        light.enabled = !on_status;
+                    }
                 }
             }
-        }
+            if (OVRInput.GetDown(OVRInput.Button.Three))
+            {
+                if (overlayIsOn)
+                {
+                    turnOnOverlay(false);
+                    CompleteOutlines.enabled = false;
+                }
+                else
+                {
+                    turnOnOverlay(true);
+                }
+            }
+            if (OVRInput.GetDown(OVRInput.Button.Four))
+            {
+                outlineToggle++;
 
+                if (outlineToggle >= (int)outlines.NumberOfTypes)
+                {
+                    outlineToggle = 0;
+                }
+                outlineType = (outlines)outlineToggle;
+            }
+        }
         // Draw outlines
         if (overlayIsOn)
         {
@@ -119,25 +154,12 @@ public class Overlay : MonoBehaviour
             {
                 outlineType = outlines.squares;
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha5))
-            {
-                outlineType = outlines.complete;
-            }
-            switch (outlineType)
-            {
-                case outlines.none:
-                    CompleteOutlines.enabled = false;
-                    break;
-                case outlines.squares:
-                    CompleteOutlines.enabled = false;
-                    break;
-                case outlines.complete:
-                    CompleteOutlines.enabled = true;
-                    break;
-                default:
-                    break;
-            }
         }
+    }
+
+    public void OverlayOn(bool status)
+    {
+        turnOnOverlay(status);
     }
 
     private void turnOnOverlay(bool is_on)
@@ -180,7 +202,7 @@ public class Overlay : MonoBehaviour
             {
                 Ray ray = Cam.ViewportPointToRay(new Vector3(x, y, 0));
                 RaycastHit hit;
-                
+                int mask = 1 << LayerMask.NameToLayer("OutlineLayer");
                 if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.layer == LayerMask.NameToLayer("OutlineLayer"))
                 {
                     // Find parent that is in the outlineLayer
