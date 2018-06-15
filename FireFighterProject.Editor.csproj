@@ -389,6 +389,7 @@
     <Compile Include="Assets\UMA\Examples\Physics Examples\Scripts\Editor\ClothHelperEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\3DModels\Models\LICENSE.txt" />
     <None Include="Assets\ColorDisplacementShader.shader" />
     <None Include="Assets\Materials\Real Materials\Showcase\Sounds\Seisemic - license.txt" />
     <None Include="Assets\Materials\Real Materials\Showcase\Sounds\Waves background - license.txt" />
