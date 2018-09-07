@@ -39,9 +39,6 @@
 		{
 			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
 
-			// TODO: only sample heat is the pixel's IN.uv_MainTex % division == 0, then save in a 2D array
-			// Interpolate all others between the sampled pixels
-
 			// Get the average of all heat sources' influence on current pixel
 			float temp = 0;
 			for (int i = 0; i < _HeatSources_Length; ++i)
@@ -50,7 +47,7 @@
 				half fraction = dist / _MaxDist;
 				if (fraction > 1)
 				{
-					continue; // TODO: figure out why radii are causing black lines
+					continue;
 				}
 				// Invert brightness and multiply by source temperature
 				fraction = (1 - fraction) * _HeatSources[i].a;

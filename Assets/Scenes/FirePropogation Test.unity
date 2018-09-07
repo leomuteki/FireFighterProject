@@ -2619,6 +2619,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   temperature: 0.5
   CoolDownDuration: 2
+--- !u!84 &111261861
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 256
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!4 &113458995
 Transform:
   m_ObjectHideFlags: 0
@@ -4194,6 +4225,37 @@ Rigidbody:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: bf495eacf58e31146ab012aa89ac68da, type: 2}
   m_PrefabInternal: {fileID: 1319973557}
+--- !u!84 &229996809
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 256
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &238608721
 GameObject:
   m_ObjectHideFlags: 0
@@ -6403,7 +6465,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
@@ -6563,6 +6625,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321754119}
   m_Mesh: {fileID: 4300228, guid: b6c9c82bb19dd26468f8c3f4ece8f89b, type: 3}
+--- !u!84 &327843524
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 740
+  m_Height: 714
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!4 &328959116 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c0e05edf687fbfb41a505e06778eafbd, type: 2}
@@ -7320,37 +7413,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 351985240}
   m_Mesh: {fileID: 4300164, guid: b6c9c82bb19dd26468f8c3f4ece8f89b, type: 3}
---- !u!84 &352740690
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 672
-  m_Height: 683
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &364796870
 GameObject:
   m_ObjectHideFlags: 0
@@ -7732,7 +7794,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 0
   m_RenderingPath: 1
-  m_TargetTexture: {fileID: 1302216427}
+  m_TargetTexture: {fileID: 997958978}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -12410,6 +12472,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 555445725}
   m_Mesh: {fileID: 4300282, guid: b6c9c82bb19dd26468f8c3f4ece8f89b, type: 3}
+--- !u!84 &556616154
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 740
+  m_Height: 714
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!4 &560984553 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c0e05edf687fbfb41a505e06778eafbd, type: 2}
@@ -15249,7 +15342,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 0
   m_RenderingPath: 1
-  m_TargetTexture: {fileID: 796833656}
+  m_TargetTexture: {fileID: 327843524}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -16264,37 +16357,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4338456197666832, guid: 3f4f8f1bd0160ea43a4c4b2fe7e08a93,
     type: 2}
   m_PrefabInternal: {fileID: 36060855}
---- !u!84 &758862587
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 256
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &759883179
 GameObject:
   m_ObjectHideFlags: 0
@@ -16523,6 +16585,37 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 409100, guid: db0cb7477ec54a647a6b27e8ccd4259c, type: 2}
   m_PrefabInternal: {fileID: 768478255}
+--- !u!84 &771953722
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 256
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &773693405
 GameObject:
   m_ObjectHideFlags: 0
@@ -16814,8 +16907,8 @@ MonoBehaviour:
   sourceCamera: {fileID: 783771374}
   outlineCamera: {fileID: 1183389936}
   outlineShaderMaterial: {fileID: 0}
-  renderTexture: {fileID: 758862587}
-  extraRenderTexture: {fileID: 1998910803}
+  renderTexture: {fileID: 1292456498}
+  extraRenderTexture: {fileID: 229996809}
 --- !u!124 &783771373
 Behaviour:
   m_ObjectHideFlags: 0
@@ -17114,37 +17207,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 793795837}
   m_Mesh: {fileID: 4300154, guid: b6c9c82bb19dd26468f8c3f4ece8f89b, type: 3}
---- !u!84 &796833656
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 672
-  m_Height: 683
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &799658141
 GameObject:
   m_ObjectHideFlags: 0
@@ -20900,6 +20962,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 996331767}
   m_Mesh: {fileID: 4300074, guid: b6c9c82bb19dd26468f8c3f4ece8f89b, type: 3}
+--- !u!84 &997958978
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 256
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1002641084
 GameObject:
   m_ObjectHideFlags: 0
@@ -25366,7 +25459,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 0
   m_RenderingPath: 1
-  m_TargetTexture: {fileID: 758862587}
+  m_TargetTexture: {fileID: 1292456498}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -26720,6 +26813,37 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 409100, guid: db0cb7477ec54a647a6b27e8ccd4259c, type: 2}
   m_PrefabInternal: {fileID: 1283764405}
+--- !u!84 &1292456498
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 256
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1001 &1297437772
 Prefab:
   m_ObjectHideFlags: 0
@@ -27064,37 +27188,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!84 &1302216427
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 256
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1302788709
 GameObject:
   m_ObjectHideFlags: 0
@@ -27482,68 +27575,6 @@ Transform:
   m_Father: {fileID: 939469699}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!84 &1324186001
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 672
-  m_Height: 683
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
---- !u!84 &1324713659
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 256
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1325680848
 GameObject:
   m_ObjectHideFlags: 0
@@ -28200,37 +28231,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1374928457}
   m_Mesh: {fileID: 4300052, guid: b6c9c82bb19dd26468f8c3f4ece8f89b, type: 3}
---- !u!84 &1378412939
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 256
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1381277504 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1165084302908874, guid: c4762efb6a491c6488e0c51913075c3b,
@@ -29499,6 +29499,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1442046154}
   m_Mesh: {fileID: 4300196, guid: b6c9c82bb19dd26468f8c3f4ece8f89b, type: 3}
+--- !u!84 &1442801768
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 740
+  m_Height: 714
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1443566099
 GameObject:
   m_ObjectHideFlags: 0
@@ -31497,6 +31528,37 @@ Transform:
   m_Father: {fileID: 939469699}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!84 &1564523077
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 256
+  m_Height: 256
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1566240801
 GameObject:
   m_ObjectHideFlags: 0
@@ -31799,6 +31861,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1567770466}
   m_Mesh: {fileID: 4300038, guid: b6c9c82bb19dd26468f8c3f4ece8f89b, type: 3}
+--- !u!84 &1578145506
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_Width: 740
+  m_Height: 714
+  m_AntiAliasing: 1
+  m_DepthFormat: 1
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &1579065358
 GameObject:
   m_ObjectHideFlags: 0
@@ -33864,15 +33957,15 @@ Prefab:
         type: 2}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 1324713659}
+      objectReference: {fileID: 1564523077}
     - target: {fileID: 20276876584944080, guid: 9a32dfe5a1ffa9c418d9143fe6866739,
         type: 2}
       propertyPath: m_TargetTexture
       value: 
-      objectReference: {fileID: 1324186001}
+      objectReference: {fileID: 556616154}
     - target: {fileID: 1449442090863934, guid: 9a32dfe5a1ffa9c418d9143fe6866739, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4151100536719580, guid: 9a32dfe5a1ffa9c418d9143fe6866739, type: 2}
       propertyPath: m_RootOrder
@@ -34178,8 +34271,8 @@ MonoBehaviour:
   sourceCamera: {fileID: 1729472479}
   outlineCamera: {fileID: 378395408}
   outlineShaderMaterial: {fileID: 0}
-  renderTexture: {fileID: 1302216427}
-  extraRenderTexture: {fileID: 1378412939}
+  renderTexture: {fileID: 997958978}
+  extraRenderTexture: {fileID: 771953722}
 --- !u!124 &1729472478
 Behaviour:
   m_ObjectHideFlags: 0
@@ -38273,8 +38366,28 @@ MonoBehaviour:
   sourceCamera: {fileID: 1938157657}
   outlineCamera: {fileID: 702853920}
   outlineShaderMaterial: {fileID: 0}
-  renderTexture: {fileID: 796833656}
-  extraRenderTexture: {fileID: 352740690}
+  renderTexture: {fileID: 327843524}
+  extraRenderTexture: {fileID: 1442801768}
+--- !u!114 &1938157656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1938157652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8eb5cdcd019aa4c8432d2afd7d3718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AlwaysThermal: 0
+  squareLinesMaterial: {fileID: 2100000, guid: 540c89af520025d468f10fe0294fa8c2, type: 2}
+  xGap: 0.02
+  yGap: 0.02
+  OutlineScanDelay: 0.1
+  allLights: []
+  MenuStartPosition: {fileID: 0}
+  Menu: {fileID: 0}
+  sphere: {fileID: 0}
 --- !u!20 &1938157657 stripped
 Camera:
   m_PrefabParentObject: {fileID: 20943061698482392, guid: 9a32dfe5a1ffa9c418d9143fe6866739,
@@ -39300,37 +39413,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400156, guid: 160e290985db6064899c19b01ca5f71e, type: 3}
   m_PrefabInternal: {fileID: 1958079462}
---- !u!84 &1998910803
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_Width: 256
-  m_Height: 256
-  m_AntiAliasing: 1
-  m_DepthFormat: 1
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &1999627768
 GameObject:
   m_ObjectHideFlags: 0
